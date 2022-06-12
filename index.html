@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Joongbu-Travel</title>
+    <link rel="icon" type="image/x-icon" href="./images/mail.png" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper/swiper-bundle.min.css"
+    />
+
+    <!-- font awesome cdn link  -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+
+    <!-- custom css file cdn link  -->
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <!-- header section starts  -->
+
+    <header class="header">
+      <a href="index.html" class="logo">
+        <i class="fas fa-paper-plane"></i> Joongbu-Travel
+      </a>
+
+      <form action="" class="search-form">
+        <input
+          type="search"
+          name=""
+          placeholder="search here..."
+          id="searchBox"
+        />
+        <label for="searchBox" class="fas fa-search"></label>
+      </form>
+
+      <div class="icons">
+        <div class="fas fa-search" id="search-btn"></div>
+        <div class="fas fa-moon" id="theme-btn"></div>
+        <div class="fas fa-user" id="login-btn"></div>
+        <div class="fas fa-bars" id="menu-btn"></div>
+      </div>
+
+      <nav class="navbar">
+        <a href="teamintroduce.html">팀원 소개</a>
+        <a href="kyeongki.html">경기도</a>
+        <a href="kangwon.html">강원도</a>
+        <a href="chungcheong.html">충청도</a>
+        <a href="jeon.html">전라도</a>
+        <a href="jeju.html">제주도</a>
+        <a href="kyeongsang.html">경상도</a>
+      </nav>
+
+      <form action="" class="login-form">
+        <div class="inputBox">
+          <span>username</span>
+          <input type="text" placeholder="enter your name" />
+        </div>
+
+        <div class="inputBox">
+          <span>password</span>
+          <input type="password" placeholder="enter your password" />
+        </div>
+
+        <div class="remember">
+          <input type="checkbox" name="" id="login-remember" />
+          <label for="login-remember">remember me</label>
+        </div>
+
+        <input type="submit" class="btn" value="login" />
+      </form>
+    </header>
+
+    <!-- header section ends -->
+
+    <!-- home section starts  -->
+
+    <section class="home" id="home">
+      <div class="image" data-aos="fade-down">
+        <img src="images/Taipei-pana.svg" alt="" />
+      </div>
+
+      <div class="content" data-aos="fade-up">
+        <h3>Joongbu-Travel</h3>
+        <p>전국을 6개의 '도'로 나누어 관광지를 소개하는 웹 사이트</p>
+        <a href="#" class="btn">explore now</a>
+      </div>
+    </section>
+
+    <!-- home section ends -->
+
+    <!-- filter form section starts  -->
+
+    <section class="form-container" data-aos="zoom-in">
+      <form action="">
+        <div class="inputBox">
+          <span>where to</span>
+          <input type="text" placeholder="search places" />
+        </div>
+
+        <div class="inputBox">
+          <span>arrivals</span>
+          <input type="date" />
+        </div>
+
+        <div class="inputBox">
+          <span>leaving</span>
+          <input type="date" />
+        </div>
+
+        <input type="submit" value="book now" class="btn" />
+      </form>
+    </section>
+
+    <!-- filter form section ends -->
+
+    <!-- packages section starts  -->
+
+    <section class="packages" id="packages">
+      <h1 class="heading"><span>지역</span></h1>
+
+      <div class="box-container">
+        <div class="box" data-aos="fade-up">
+          <div class="image">
+            <img src="ggd/ghktjd.jpg" alt="Photo" />
+          </div>
+          <div class="content">
+            <a href="kyeongki.html" class="btn"> 경기도</a>
+          </div>
+        </div>
+
+        <div class="box" data-aos="fade-up">
+          <div class="image">
+            <img src="gwd/ddd.jpg" alt="Photo" />
+            <!-- <h3><i class="fas fa-map-marker-alt"></i> 강원도</h3> -->
+          </div>
+          <div class="content">
+            <a href="kangwon.html" class="btn"> 강원도</a>
+          </div>
+        </div>
+
+        <div class="box" data-aos="fade-up">
+          <div class="image">
+            <img src="images/chungcheong2.jpeg" alt="Photo" />
+          </div>
+          <div class="content">
+            <a href="chungcheong.html" class="btn"> 충청도</a>
+          </div>
+        </div>
+
+        <div class="box" data-aos="fade-up">
+          <div class="image">
+            <img src="images/jeon1.jpg" alt="Photo" />
+          </div>
+          <div class="content">
+            <a href="jeon.html" class="btn"> 전라도</a>
+          </div>
+        </div>
+
+        <div class="box" data-aos="fade-up">
+          <div class="image">
+            <img src="images/jeju1.jpeg" alt="Photo" />
+            <!-- <h3><i class="fas fa-map-marker-alt"></i> 제주도</h3> -->
+          </div>
+          <div class="content">
+            <a href="jeju.html" class="btn"> 제주도</a>
+          </div>
+        </div>
+
+        <div class="box" data-aos="fade-up">
+          <div class="image">
+            <img src="images/gyeong1.jpg" alt="Photo" />
+          </div>
+          <div class="content">
+            <a href="kyeongsang.html" class="btn">경상도</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="review" id="review">
+      <h1 class="heading"><span>개인 웹 사이트</span></h1>
+
+      <div class="swiper-container review-slider" data-aos="zoom-in">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide slide">
+            <h3>giyosidin</h3>
+
+            <a href="#" class="btn">개인 웹 사이트</a>
+          </div>
+
+          <div class="swiper-slide slide">
+            <h3>신재형</h3>
+
+            <a href="https://sunny-sprite-f952bd.netlify.app/" class="btn"
+              >개인 웹 사이트</a
+            >
+          </div>
+
+          <div class="swiper-slide slide">
+            <h3>이준영</h3>
+            <a href="https://tubular-halva-d413ff.netlify.app/" class="btn"
+              >개인 웹 사이트</a
+            >
+          </div>
+
+          <div class="swiper-slide slide">
+            <h3>송채연</h3>
+            <a href="https://scyweb.netlify.app/" class="btn">개인 웹 사이트</a>
+          </div>
+        </div>
+
+        <div class="swiper-pagination"></div>
+      </div>
+    </section>
+
+    <!-- review section ends -->
+
+    <!-- contact section starts  -->
+
+    <section class="contact" id="contact">
+      <h1 class="heading"><span>문의</span></h1>
+
+      <form action="" data-aos="zoom">
+        <div class="inputBox">
+          <input type="text" placeholder="name" data-aos="fade-up" />
+          <input type="email" placeholder="email" data-aos="fade-up" />
+        </div>
+
+        <div class="inputBox">
+          <input type="number" placeholder="number" data-aos="fade-up" />
+          <input type="text" placeholder="subject" data-aos="fade-up" />
+        </div>
+
+        <textarea
+          name=""
+          placeholder="your message"
+          id=""
+          cols="30"
+          rows="10"
+          data-aos="fade-up"
+        ></textarea>
+
+        <input type="submit" value="send message" class="btn" />
+      </form>
+    </section>
+
+    <section class="footer">
+      <div class="box-container">
+        <div class="box" data-aos="fade-up">
+          <h3>지역</h3>
+          <a href="kyeongki.html">
+            <i class="fas fa-map-marker-alt"></i> 경기도
+          </a>
+          <a href="kangwon.html">
+            <i class="fas fa-map-marker-alt"></i> 강원도
+          </a>
+          <a href="chungcheong.html">
+            <i class="fas fa-map-marker-alt"></i> 충청도
+          </a>
+          <a href="jeon.html"> <i class="fas fa-map-marker-alt"></i> 전라도 </a>
+          <a href="jeju.html"> <i class="fas fa-map-marker-alt"></i> 제주도 </a>
+          <a href="kyeongsang.html">
+            <i class="fas fa-map-marker-alt"></i> 경상도
+          </a>
+        </div>
+
+        <div class="box" data-aos="fade-up">
+          <h3>개인 웹 사이트</h3>
+          <a href="#"> <i class="fas fa-chevron-right"></i> giyosidin </a>
+          <a href="https://sunny-sprite-f952bd.netlify.app/">
+            <i class="fas fa-chevron-right"></i> 신재형
+          </a>
+          <a href="https://tubular-halva-d413ff.netlify.app/">
+            <i class="fas fa-chevron-right"></i> 이준영
+          </a>
+          <a href="https://scyweb.netlify.app/">
+            <i class="fas fa-chevron-right"></i> 송채연
+          </a>
+        </div>
+
+        <div class="box" data-aos="fade-up">
+          <h3>contact info</h3>
+          <a href="#"> <i class="fas fa-phone"></i> +8210-2405-7772 </a>
+          <a href="#"> <i class="fas fa-phone"></i> +8210-2405-7772 </a>
+          <a href="#">
+            <i class="fas fa-envelop"></i> giyosidin136@gmail.com
+          </a>
+          <a href="#">
+            <i class="fas fa-map-marker-alt"></i> daejon, south-korea - 32713
+          </a>
+        </div>
+
+        <div class="box" data-aos="fade-up">
+          <h3>follow us</h3>
+          <a href="https://www.facebook.com/giyosidin.yuldashev.92">
+            <i class="fab fa-facebook-f"></i> facebook
+          </a>
+          <a href="#"> <i class="fab fa-twitter"></i> twitter </a>
+          <a
+            href="https://www.instagram.com/invites/contact/?i=1dwpmotbgoajd&utm_content=32w4bdt"
+          >
+            <i class="fab fa-instagram"></i> instagram
+          </a>
+          <a href="#"> <i class="fab fa-linkedin"></i> linkedin </a>
+          <a href="#"> <i class="fab fa-telegram"></i> telegram </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- footer section ends -->
+
+    <!--  web dev mr.GIYOSIDIN -->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+    <!-- custom js file link  -->
+    <script src="js/script.js"></script>
+
+    <script>
+      AOS.init({
+        duration: 800,
+        delay: 400,
+      });
+    </script>
+  </body>
+</html>

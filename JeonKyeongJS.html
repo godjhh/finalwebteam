@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Joongbu-Travel</title>
+    <link rel="icon" type="image/x-icon" href="./images/mail.png" />
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
+
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+
+    <!-- font awesome cdn link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+
+    <!-- custom css file cdn link  -->
+    <link rel="stylesheet" href="css/style.css" />
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        
+        .containerjs {
+            float: left;
+        }
+
+        .cal {
+            float: left;
+            width: 600px;
+            margin: 150px auto auto 200px;
+        }
+
+        .calheader {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .year-month{
+            font-size: 35px;    
+        }
+
+        .nav {
+            display: flex;
+            border: 1px solid #000;
+            border-radius: 5px;
+        }
+
+        .nav-btn{
+            width: 28px;
+            height: 30px;
+            border: none;
+            font-size: 16px;
+            line-height: 34px;
+            background-color: transparent;
+            cursor: pointer;
+        }
+
+        .go-today{
+            width: 75px;
+            border-left: 1px solid #000;
+            border-right: 1px solid #000;
+        }
+
+        .days {
+            display: flex;
+            margin: 25px 0 10px;
+        }
+
+        .day{
+            width: calc(100% / 7);
+            text-align: center;
+        }
+
+        .dates {
+            display: flex;
+            flex-flow: row wrap;
+            height: 500px;
+            border-top: 1px solid #000;
+            border-right: 1px solid #000;
+        }
+
+        .date{
+            width: calc(100% / 7);
+            padding: 15px;
+            text-align: right;
+            border-bottom: 1px solid #000;
+            border-left: 1px solid #000;
+        }
+
+        .day:nth-child(7n + 1),
+        .date:nth-child(7n + 1){
+            color: red;
+        }
+
+        .day:nth-child(7n),
+        .date:nth-child(7n){
+            color: blue;
+        }
+
+        .calculator {
+            float: left;
+            width: 287px;
+            border: 1px solid red;
+            background-color: #eee;
+            padding: 5px;
+            margin: 300px 200px;
+        }
+
+        .calculator form {
+            display: grid;
+            grid-template-columns: repeat(4, 65px);
+            grid-auto-rows: 65px;
+            grid-gap: 5px;
+        }
+
+        .calculator form input {
+            border: 2px solid red;
+            cursor: pointer;
+        }
+        
+        .calculator form input:hover {
+            box-shadow: 1px 1px 2px #333;
+            cursor: pointer;
+        }
+
+        .calculator form .clear {
+            background-color: red;
+            color: #fff;
+        }
+
+        .calculator form .op {
+            background-color: red;
+            color: #fff;
+        }
+
+        .calculator form .dot {
+            background-color: red;
+            color: #fff;
+        }
+
+        .calculator form .dot {
+            background-color: red;
+            color: #fff;
+        }
+
+        .calculator form input[type='text']{
+            grid-column: span 4;
+            text-align: right;
+            padding: 0 10px;
+        }
+
+        .calculator form .clear {
+            grid-column: span 3;
+        }
+
+        .calculator form .result {
+            grid-column: span 2;
+        }
+    </style>
+
+</head>
+
+<body>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
+
+    <header class="header">
+        <a href="index.html" class="logo">
+            <i class="fas fa-paper-plane"></i> Joongbu-Travel
+        </a>
+
+        <form action="" class="search-form">
+            <input type="search" name="" placeholder="search here..." id="searchBox" />
+            <label for="searchBox" class="fas fa-search"></label>
+        </form>
+
+        <div class="icons">
+            <div class="fas fa-search" id="search-btn"></div>
+            <div class="fas fa-moon" id="theme-btn"></div>
+            <div class="fas fa-user" id="login-btn"></div>
+            <div class="fas fa-bars" id="menu-btn"></div>
+        </div>
+
+        <nav class="navbar">
+            <a href="teamintroduce.html">팀원 소개</a>
+            <a href="kyeongki.html">경기도</a>
+            <a href="kangwon.html">강원도</a>
+            <a href="chungcheong.html">충청도</a>
+            <a href="jeon.html">전라도</a>
+            <a href="jeju.html">제주도</a>
+            <a href="kyeongsang.html">경상도</a>
+        </nav>
+
+        <form action="" class="login-form">
+            <div class="inputBox">
+                <span>username</span>
+                <input type="text" placeholder="enter your name" />
+            </div>
+
+            <div class="inputBox">
+                <span>password</span>
+                <input type="password" placeholder="enter your password" />
+            </div>
+
+            <div class="remember">
+                <input type="checkbox" name="" id="login-remember" />
+                <label for="login-remember">remember me</label>
+            </div>
+
+            <input type="submit" class="btn" value="login" />
+        </form>
+    </header>
+    </section>
+
+    <div class="containerjs">
+        <div class="cal">
+            <div class="calheader">
+                <div class="year-month"></div>
+                <div class="nav">
+                    <button class="nav-btn go-prev" onclick="prevMonth()">&lt;</button>
+                    <button class="nav-btn go-today" onclick="goToday()">TODAY</button>
+                    <button class="nav-btn go-next" onclick="nextMonth()">&gt;</button>
+                </div>
+            </div>
+            <div class="calmain">
+                <div class="days">
+                    <div class="day">일</div>
+                    <div class="day">월</div>
+                    <div class="day">화</div>
+                    <div class="day">수</div>
+                    <div class="day">목</div>
+                    <div class="day">금</div>
+                    <div class="day">토</div>
+                </div>
+                <div class="dates"></div>
+            </div>
+        </div>
+
+        <div class="calculator">
+            <form name="forms">
+                <input type="text" name="output" readonly>
+                <input type="button" class="clear" value="C" onclick="document.forms.output.value=''">
+                <input type="button" class="op" value="/" onclick="document.forms.output.value+='/'">
+                <input type="button" value="1" onclick="document.forms.output.value+='1'">
+                <input type="button" value="2" onclick="document.forms.output.value+='2'">
+                <input type="button" value="3" onclick="document.forms.output.value+='3'">
+                <input type="button" class="op" value="*" onclick="document.forms.output.value+='*'">
+                <input type="button" value="4" onclick="document.forms.output.value+='4'">
+                <input type="button" value="5" onclick="document.forms.output.value+='5'">
+                <input type="button" value="6" onclick="document.forms.output.value+='6'"> 
+                <input type="button" class="op" value="+" onclick="document.forms.output.value+='+'"> 
+                <input type="button" value="7" onclick="document.forms.output.value+='7'">
+                <input type="button" value="8" onclick="document.forms.output.value+='8'">
+                <input type="button" value="9" onclick="document.forms.output.value+='9'">
+                <input type="button" class="op" value="-" onclick="document.forms.output.value+='-'">
+                <input type="button" class="dot" value="." onclick="document.forms.output.value+='.'">
+                <input type="button" value="0" onclick="document.forms.output.value+='0'">
+                <input type="button" class="op result" value="=" onclick="document.forms.output.value=eval(document.forms.output.value)">
+                
+            </form>
+        </div>        
+    </div>
+
+
+    <section class="footer">
+        <div class="box-container">
+            <div class="box" data-aos="fade-up">
+                <h3>지역</h3>
+                <a href="kyeongki.html">
+                    <i class="fas fa-map-marker-alt"></i> 경기도
+                </a>
+                <a href="kangwon.html">
+                    <i class="fas fa-map-marker-alt"></i> 강원도
+                </a>
+                <a href="chungcheong.html">
+                    <i class="fas fa-map-marker-alt"></i> 충청도
+                </a>
+                <a href="jeon.html"> <i class="fas fa-map-marker-alt"></i> 전라도 </a>
+                <a href="jeju.html"> <i class="fas fa-map-marker-alt"></i> 제주도 </a>
+                <a href="kyeongsang.html">
+                    <i class="fas fa-map-marker-alt"></i> 경상도
+                </a>
+            </div>
+
+            <div class="box" data-aos="fade-up">
+                <h3>개인 웹 사이트</h3>
+                <a href="#"> <i class="fas fa-chevron-right"></i> giyosidin </a>
+                <a href="https://sunny-sprite-f952bd.netlify.app/">
+                    <i class="fas fa-chevron-right"></i> 신재형
+                </a>
+                <a href="https://tubular-halva-d413ff.netlify.app/"> <i class="fas fa-chevron-right"></i> 이준영 </a>
+                <a href="https://scyweb.netlify.app/"> <i class="fas fa-chevron-right"></i> 송채연 </a>
+            </div>
+
+            <div class="box" data-aos="fade-up">
+                <h3>contact info</h3>
+                <a href="#"> <i class="fas fa-phone"></i> +8210-2405-7772 </a>
+                <a href="#"> <i class="fas fa-phone"></i> +8210-2405-7772 </a>
+                <a href="#">
+                    <i class="fas fa-envelop"></i> giyosidin136@gmail.com
+                </a>
+                <a href="#">
+                    <i class="fas fa-map-marker-alt"></i> daejon, south-korea - 32713
+                </a>
+            </div>
+
+            <div class="box" data-aos="fade-up">
+                <h3>follow us</h3>
+                <a href="https://www.facebook.com/giyosidin.yuldashev.92">
+                    <i class="fab fa-facebook-f"></i> facebook
+                </a>
+                <a href="#"> <i class="fab fa-twitter"></i> twitter </a>
+                <a href="https://www.instagram.com/invites/contact/?i=1dwpmotbgoajd&utm_content=32w4bdt">
+                    <i class="fab fa-instagram"></i> instagram
+                </a>
+                <a href="#"> <i class="fab fa-linkedin"></i> linkedin </a>
+                <a href="#"> <i class="fab fa-telegram"></i> telegram </a>
+            </div>
+        </div>
+
+
+    </section>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <!-- 자바스크립트 -->
+
+    <!-- custom js file link  -->
+    <script src="js/script.js"></script>
+
+    <script>
+        AOS.init({
+            duration: 800,
+            delay: 400,
+        });
+    </script>
+</body>
+
+</html>

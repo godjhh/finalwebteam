@@ -1,0 +1,624 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Joongbu-Travel</title>
+    <link rel="icon" type="image/x-icon" href="./images/mail.png" />
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
+
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+
+    <!-- font awesome cdn link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+
+    <!-- custom css file cdn link  -->
+    <link rel="stylesheet" href="css/style.css" />
+
+    <style>
+        body {
+            background-color: #eee;
+            margin: auto 40px;
+        }
+
+        .gyeongsangdo {
+            margin: 25px auto;
+
+        }
+
+        .gyeongsangdo h1 {
+            text-align: center;
+            line-height: 60px;
+            font-weight: bold;
+        }
+
+        .gyeongsangdoIntro {
+            background-color: red;
+            opacity: 0.7;
+            color: #fff;
+            font-size: 20px;
+            border-radius: 15px;
+        }
+
+        .gyeongsangdoIntro .over {
+            border: 2px solid #fff;
+            background-color: red;
+            border-radius: 10px;
+            width: 150px;
+            color: #fff;
+            margin: 20px;
+
+        }
+
+        .gyeongsangdoIntro .detail {
+            display: none;
+        }
+
+        .gyeongsangdoIntro p {
+            margin: 10px 15px;
+            line-height: 50px;
+        }
+
+        .accordion {
+            margin: 10px auto 40px auto;
+            width: 1000px;
+        }
+
+        .img {
+            text-align: center;
+
+        }
+
+        .img img {
+            width: 1000px;
+        }
+
+
+
+        .gyeongsangdoTrav b {
+            font-size: 20px;
+            margin: 10px 15px;
+            line-height: 70px;
+        }
+
+
+        .accordion .accordion-button {
+            font-size: 20px;
+            background-color: red;
+            opacity: 0.7;
+            color: #fff;
+            text-align: center;
+
+        }
+
+        button h3 {
+            margin-left: 450px;
+        }
+
+        button .lit {
+            margin-left: 400px;
+        }
+
+        ul {
+            font-size: 14px;
+            list-style: none;
+            margin: 40px auto;
+        }
+
+        .thebayIntro li {
+            margin-bottom: 15px;
+        }
+
+        .thebayIntro button {
+            float: right;
+            margin: -50px 20px auto auto;
+            height: 40px;
+            width: 110px;
+            border-radius: 5px;
+            background-color: red;
+            opacity: 0.7;
+
+        }
+
+        .thebayIntro button>a {
+            text-decoration: none;
+            color: #fff;
+            margin-bottom: 20px;
+        }
+
+        .twonIntro li {
+            margin-bottom: 15px;
+        }
+
+        .twonIntro button {
+            float: right;
+            margin: -50px 20px auto auto;
+            height: 40px;
+            width: 110px;
+            border-radius: 5px;
+            background-color: red;
+            opacity: 0.7;
+
+        }
+
+        .twonIntro button>a {
+            text-decoration: none;
+            color: #fff;
+            margin-bottom: 20px;
+        }
+
+        .aquaIntro li {
+            margin-bottom: 15px;
+        }
+
+        .aquaIntro button {
+            float: right;
+            margin: -50px 20px auto auto;
+            height: 40px;
+            width: 100px;
+            border-radius: 5px;
+            background-color: red;
+            opacity: 0.7;
+
+        }
+
+        .aquaIntro button>a {
+            text-decoration: none;
+            color: #fff;
+            margin-bottom: 20px;
+        }
+
+        .loadIntro li {
+            margin-bottom: 15px;
+        }
+
+
+        .loadIntro button {
+            margin: 10px 30px;
+            height: 40px;
+            width: 120px;
+            border-radius: 5px;
+            background-color: red;
+            opacity: 0.7;
+
+        }
+
+        .loadIntro button>a {
+            text-decoration: none;
+            color: #fff;
+            margin-bottom: 20px;
+        }
+
+    
+
+
+
+        .antIntro li {
+            margin-bottom: 15px;
+        }
+
+        .antIntro li>div {
+            text-align: center;
+        }
+
+        .help {
+            font-size: 20px;
+            border: 2px solid #fff;
+            width: 150px;
+            float: right;
+            border-radius: 10px;
+            background-color: red;
+            opacity: 0.7;
+            margin-top: 10px;
+        }
+
+        .help a {
+            color: #fff;
+            text-decoration: none;
+        }
+    </style>
+
+</head>
+
+<body>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
+
+    <header class="header">
+        <a href="index.html" class="logo">
+            <i class="fas fa-paper-plane"></i> Joongbu-Travel
+        </a>
+
+        <form action="" class="search-form">
+            <input type="search" name="" placeholder="search here..." id="searchBox" />
+            <label for="searchBox" class="fas fa-search"></label>
+        </form>
+
+        <div class="icons">
+            <div class="fas fa-search" id="search-btn"></div>
+            <div class="fas fa-moon" id="theme-btn"></div>
+            <div class="fas fa-user" id="login-btn"></div>
+            <div class="fas fa-bars" id="menu-btn"></div>
+        </div>
+
+        <nav class="navbar">
+            <a href="teamintroduce.html">팀원 소개</a>
+            <a href="kyeongki.html">경기도</a>
+            <a href="kangwon.html">강원도</a>
+            <a href="chungcheong.html">충청도</a>
+            <a href="jeon.html">전라도</a>
+            <a href="jeju.html">제주도</a>
+            <a href="kyeongsang.html">경상도</a>
+        </nav>
+
+        <form action="" class="login-form">
+            <div class="inputBox">
+                <span>username</span>
+                <input type="text" placeholder="enter your name" />
+            </div>
+
+            <div class="inputBox">
+                <span>password</span>
+                <input type="password" placeholder="enter your password" />
+            </div>
+
+            <div class="remember">
+                <input type="checkbox" name="" id="login-remember" />
+                <label for="login-remember">remember me</label>
+            </div>
+
+            <input type="submit" class="btn" value="login" />
+        </form>
+    </header>
+    </section>
+
+    <div id="kyeongsangintro"></div>
+    <h1 class="heading gyeongsangdo"> 경상도 <span>부산</span> </h1>
+    <div class="gyeongsangdoIntro">
+        <script>
+            function showDetail() {
+                document.querySelector('#desc').style.display = "block";
+                document.querySelector('#open').style.display = "none";
+            }
+            function hideDetail() {
+                document.querySelector('#desc').style.display = "none";
+                document.querySelector('#open').style.display = "block";
+            }
+        </script>
+        <button class="over" id="open" onclick="showDetail()">EXPLANATION</button>
+        <div id="desc" class="detail">
+            <p>
+                <b>도시정보</b><br>
+                대한민국 제2의 도시이자, 제1의 무역항이다. <br>동쪽과 남쪽은 바다에 면하고, 서쪽은 김해시 장유동과 창원시 진해구, 북쪽은 양산시 물금읍과 김해시 대동면, 동쪽은 울산광역시
+                서생면·온양읍에
+                접한다.<br> 대한민국 남동단의 관문으로 서울특별시에서 남동쪽으로 약 450km, 대한해협을 끼고 일본 시모노세키[下關]와 약 250km 떨어져 있다. <br> 1군 15구로 이루어져
+                있으며, 면적은
+                765.94㎢이다.<br> 시청 소재지는 부산광역시 연제구 연산5동 1000번지이다.
+            </p>
+            <button class="over" id="close" onclick="hideDetail()">CLOSE</button>
+        </div>
+    </div>
+    
+
+
+    <div class="gyeongsangdoTrav">
+        <b>가볼만한 곳</b>
+        <button class="help"><a href="JeonKyeongJS.html">Helper</a></button>
+        <div class="img">
+            <img src="images/gyeongsangdo_1_101.jpg" class="img-thumbnail" alt="...">
+        </div>
+        <div class="accordion" id="accordionPanelsStayOpenExample">
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="panelsStayOpen-headingOne">
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true"
+                        aria-controls="panelsStayOpen-collapseOne">
+                        <h3> 더베이 101 </h3>
+                    </button>
+                </h2>
+                <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse"
+                    aria-labelledby="panelsStayOpen-headingOne">
+                    <div class="accordion-body">
+                        <ul class="thebayIntro">
+                            <li>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                    class="bi bi-geo-alt" viewBox="0 0 16 16">
+                                    <path
+                                        d="M12.166 8.94c-.524 1.062-1.234 2.12-1.96 3.07A31.493 31.493 0 0 1 8 14.58a31.481 31.481 0 0 1-2.206-2.57c-.726-.95-1.436-2.008-1.96-3.07C3.304 7.867 3 6.862 3 6a5 5 0 0 1 10 0c0 .862-.305 1.867-.834 2.94zM8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10z" />
+                                    <path d="M8 8a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm0 1a3 3 0 1 0 0-6 3 3 0 0 0 0 6z" />
+                                </svg>
+                                <strong> 부산 해운대구 동백로 52 </strong>
+                            </li>
+                            <li>
+                                <strong> 영업시간</strong> | <br>
+                                더베이 101 | 08:00 ~ 00:00<br>
+                                대도식당 | 07:00 ~ 22:00<br>
+                                핑거스앤챗 | 12:00 ~ 00:00<br>
+                            </li>
+                            <li>
+                                <button><a href="http://naver.me/x9ZpL2Os">블로그 바로가기</a></button>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="img">
+            <img src="images/gyeongsangdo_2_village.jpg" class="img-thumbnail" alt="">
+        </div>
+        <div class="accordion" id="accordionPanelsStayOpenExample">
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="panelsStayOpen-headingTwo">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false"
+                        aria-controls="panelsStayOpen-collapseTwo">
+                        <h3> 감천문화마을 </h3>
+                    </button>
+                </h2>
+                <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse"
+                    aria-labelledby="panelsStayOpen-headingTwo">
+                    <div class="accordion-body">
+                        <ul class="twonIntro">
+                            <li>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                    class="bi bi-geo-alt" viewBox="0 0 16 16">
+                                    <path
+                                        d="M12.166 8.94c-.524 1.062-1.234 2.12-1.96 3.07A31.493 31.493 0 0 1 8 14.58a31.481 31.481 0 0 1-2.206-2.57c-.726-.95-1.436-2.008-1.96-3.07C3.304 7.867 3 6.862 3 6a5 5 0 0 1 10 0c0 .862-.305 1.867-.834 2.94zM8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10z" />
+                                    <path d="M8 8a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm0 1a3 3 0 1 0 0-6 3 3 0 0 0 0 6z" />
+                                </svg>
+                                <strong> 부산광역시 사하구 감내2로 203(감천동) </strong>
+                            </li>
+                            <li>
+                                감천문화마을은 1950년대 6.25 피난민의 힘겨운 삶의 터전으로 시작되어 현재에 이르기까지 민족현대사의 한 단면과 흔적인 부산의 역사를 그대로 간직하고 있는
+                                곳이다. <br>
+                                산자락을 따라 질서정연하게 늘어선 계단식 집단 주거형태와 모든 길이 통하는 미로미로(美路迷路) 골목길의 경관은 감천만의 독특함을 보여준다.<br>
+                                감천의 이런 특색과 역사적 가치를 살리기 위해 지역 예술인들과 마을 주민들이 모여 시작한 『마을미술 프로젝트』는 감천문화마을 만들기 사업의 디딤돌이 되었으며
+                                이 사업을 시작으로 각종 공모사업을 유치하여 2019년에는 308만여명이 방문하는 명소가 되었다.<br>
+                            </li>
+                            <li>
+                                <strong>체험 프로그램 안내</strong><br>
+                                운영시간 - 09:00 ~ 16:00<br>
+                                운영장소 - 감내골 행복발전소, 감내어울터<br>
+                                대상 - 유치원생, 초·중 ·고 학생, 일반시민 등 단체(10인이상 단체가능) <br>
+                                접수 - 전화 : 감천문화마을 안내센터(Tel. 051-204-1444 / 070-4485-7405), - 인터넷 : <a
+                                    href="https://m.gamcheon.or.kr/?doc=sub_02_06">홈페이지</a> <br>
+
+                            </li>
+
+                            <li>
+                                <button><a href="https://m.gamcheon.or.kr/">블로그 바로가기</a></button>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="img">
+            <img src="images/gyeongsangdo_3_aqua.jpg" class="img-thumbnail" alt="">
+        </div>
+
+        <div class="accordion" id="accordionPanelsStayOpenExample">
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="panelsStayOpen-headingThree">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#panelsStayOpen-collapseThree" aria-expanded="false"
+                        aria-controls="panelsStayOpen-collapseThree">
+                        <h3> 아쿠아리움 </h3>
+                    </button>
+                </h2>
+                <div id="panelsStayOpen-collapseThree" class="accordion-collapse collapse"
+                    aria-labelledby="panelsStayOpen-headingThree">
+                    <div class="accordion-body">
+                        <ul class="aquaIntro">
+                            <li>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                    class="bi bi-geo-alt" viewBox="0 0 16 16">
+                                    <path
+                                        d="M12.166 8.94c-.524 1.062-1.234 2.12-1.96 3.07A31.493 31.493 0 0 1 8 14.58a31.481 31.481 0 0 1-2.206-2.57c-.726-.95-1.436-2.008-1.96-3.07C3.304 7.867 3 6.862 3 6a5 5 0 0 1 10 0c0 .862-.305 1.867-.834 2.94zM8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10z" />
+                                    <path d="M8 8a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm0 1a3 3 0 1 0 0-6 3 3 0 0 0 0 6z" />
+                                </svg>
+                                <strong> 부산 해운대구 해운대해변로 266 </strong>
+                            </li>
+                            <li>
+                                <strong> 영업 시간</strong> |<br>
+                                월~금 - 10:00 ~ 19:00(last order - 18:00)<br>
+                                토~일 - 10:00 ~ 20:00(last order - 19:00)
+                            </li>
+                            <li>
+                                <img src="images/gyeongsangdo_3_price.jpg.png" class="img-thumbnail" alt="..."
+                                    width="600px">
+                            </li>
+                            <li>
+                                <button><a href="http://naver.me/GaLSyjTN">예매 바로가기</a></button>
+                            </li>
+                        </ul>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="img">
+            <img src="images/gyeongsangdo_4_load.jpg" class="img-thumbnail" alt="">
+        </div>
+        <div class="accordion" id="accordionPanelsStayOpenExample">
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="panelsStayOpen-headingFour">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#panelsStayOpen-collapseFour" aria-expanded="false"
+                        aria-controls="panelsStayOpen-collapseFour">
+                        <h3> 해리단길 </h3>
+                    </button>
+                </h2>
+                <div id="panelsStayOpen-collapseFour" class="accordion-collapse collapse"
+                    aria-labelledby="panelsStayOpen-headingFour">
+                    <div class="accordion-body">
+                        <ul class="loadIntro">
+                            <li>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                    class="bi bi-geo-alt" viewBox="0 0 16 16">
+                                    <path
+                                        d="M12.166 8.94c-.524 1.062-1.234 2.12-1.96 3.07A31.493 31.493 0 0 1 8 14.58a31.481 31.481 0 0 1-2.206-2.57c-.726-.95-1.436-2.008-1.96-3.07C3.304 7.867 3 6.862 3 6a5 5 0 0 1 10 0c0 .862-.305 1.867-.834 2.94zM8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10z" />
+                                    <path d="M8 8a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm0 1a3 3 0 1 0 0-6 3 3 0 0 0 0 6z" />
+                                </svg>
+                                <strong> 부산 해운대구 우동 510-7 </strong>
+                            </li>
+
+                            <li>
+                                <strong>근처 먹거리 정보</strong> |<br>
+                                <button><a href="http://naver.me/xbLKNSHj">제주옥탑</a></button>
+                                <button><a href="http://naver.me/FzHmHUWB">카에루식당</a></button>
+                                <button><a href="http://naver.me/FXZrZXjg">나가하마만게츠</a></button>
+                                <button><a href="http://naver.me/Gw5E77Tx">원컵어데이</a></button>
+                                <button><a href="http://naver.me/GXER0baa">버거샵</a></button>
+
+                            </li>
+
+                        </ul>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="img">
+            <img src="images/gyeongsangdo_5_ant.jpg" class="img-thumbnail" alt="">
+        </div>
+        <div class="accordion" id="accordionPanelsStayOpenExample">
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="panelsStayOpen-headingFive">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#panelsStayOpen-collapseFive" aria-expanded="false"
+                        aria-controls="panelsStayOpen-collapseFive">
+                        <h3> 개미집 </h3>
+                    </button>
+                </h2>
+                <div id="panelsStayOpen-collapseFive" class="accordion-collapse collapse"
+                    aria-labelledby="panelsStayOpen-headingFive">
+                    <div class="accordion-body">
+                        <ul class="antIntro">
+                            <li>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                    class="bi bi-geo-alt" viewBox="0 0 16 16">
+                                    <path
+                                        d="M12.166 8.94c-.524 1.062-1.234 2.12-1.96 3.07A31.493 31.493 0 0 1 8 14.58a31.481 31.481 0 0 1-2.206-2.57c-.726-.95-1.436-2.008-1.96-3.07C3.304 7.867 3 6.862 3 6a5 5 0 0 1 10 0c0 .862-.305 1.867-.834 2.94zM8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10z" />
+                                    <path d="M8 8a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm0 1a3 3 0 1 0 0-6 3 3 0 0 0 0 6z" />
+                                </svg>
+                                <strong> 부산 해운대구 구남로 34 </strong>
+                            </li>
+                            <li>
+                                <strong>영업 시간</strong> | <br>
+                                00:00 ~ 00:00(24시 영업)<br>
+
+                            </li>
+                            <li>
+                                <strong>가격</strong> |<br>
+                                낙곱새(대창) - 11000원<br>
+                                낙새 - 10000원<br>
+                                낙곱 - 10000원<br>
+                                낙지볶음 - 9000원<br>
+                                낙삼새(삼겹살) - 11000원<br>
+                                낙삼(삼겹살) - 10000원<br>
+                                해물전골 - 13000원<br>
+                                불낙지버섯전골 - 13000원<br>
+                                <br>
+                                * 2인분 이상 포장 가능, 1인 1식(2인분 이상 주문)
+
+                            </li>
+
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+    </div>
+    </div>
+
+    <section class="footer">
+        <div class="box-container">
+            <div class="box" data-aos="fade-up">
+                <h3>지역</h3>
+                <a href="kyeongki.html">
+                    <i class="fas fa-map-marker-alt"></i> 경기도
+                </a>
+                <a href="kangwon.html">
+                    <i class="fas fa-map-marker-alt"></i> 강원도
+                </a>
+                <a href="chungcheong.html">
+                    <i class="fas fa-map-marker-alt"></i> 충청도
+                </a>
+                <a href="jeon.html"> <i class="fas fa-map-marker-alt"></i> 전라도 </a>
+                <a href="jeju.html"> <i class="fas fa-map-marker-alt"></i> 제주도 </a>
+                <a href="kyeongsang.html">
+                    <i class="fas fa-map-marker-alt"></i> 경상도
+                </a>
+            </div>
+
+            <div class="box" data-aos="fade-up">
+                <h3>개인 웹 사이트</h3>
+                <a href="#"> <i class="fas fa-chevron-right"></i> giyosidin </a>
+                <a href="https://sunny-sprite-f952bd.netlify.app/">
+                    <i class="fas fa-chevron-right"></i> 신재형
+                </a>
+                <a href="https://tubular-halva-d413ff.netlify.app/"> <i class="fas fa-chevron-right"></i> 이준영 </a>
+                <a href="https://scyweb.netlify.app/"> <i class="fas fa-chevron-right"></i> 송채연 </a>
+            </div>
+
+            <div class="box" data-aos="fade-up">
+                <h3>contact info</h3>
+                <a href="#"> <i class="fas fa-phone"></i> +8210-2405-7772 </a>
+                <a href="#"> <i class="fas fa-phone"></i> +8210-2405-7772 </a>
+                <a href="#">
+                    <i class="fas fa-envelop"></i> giyosidin136@gmail.com
+                </a>
+                <a href="#">
+                    <i class="fas fa-map-marker-alt"></i> daejon, south-korea - 32713
+                </a>
+            </div>
+
+            <div class="box" data-aos="fade-up">
+                <h3>follow us</h3>
+                <a href="https://www.facebook.com/giyosidin.yuldashev.92">
+                    <i class="fab fa-facebook-f"></i> facebook
+                </a>
+                <a href="#"> <i class="fab fa-twitter"></i> twitter </a>
+                <a href="https://www.instagram.com/invites/contact/?i=1dwpmotbgoajd&utm_content=32w4bdt">
+                    <i class="fab fa-instagram"></i> instagram
+                </a>
+                <a href="#"> <i class="fab fa-linkedin"></i> linkedin </a>
+                <a href="#"> <i class="fab fa-telegram"></i> telegram </a>
+            </div>
+        </div>
+
+
+    </section>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <!-- 자바스크립트 -->
+
+    <!-- custom js file link  -->
+    <script src="js/script.js"></script>
+
+    <script>
+        AOS.init({
+            duration: 800,
+            delay: 400,
+        });
+    </script>
+</body>
+
+</html>
